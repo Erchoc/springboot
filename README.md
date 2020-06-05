@@ -42,7 +42,7 @@ Scala: SprintBoot、SpaingDataJPA、Java、Scala
   JavaVerson: 11
   Version: 0.0.1
   Name: mmp
-  Description: Metedata Managerment Platform
+  Description: Metadata Managerment Platform
   Package: cn.tinytank.mmp
 4. Dependencies
   SpringBoot: 2.3.0
@@ -76,7 +76,7 @@ IDEA默认配置可能响应不太灵敏，其自动识别和推导时不时存�
 Scala实体定义为什么加 @BeanProperty？统一访问原则，用来自动处理getter和setter方法。
 javax和spring分别的 @Transactional 事务注解有什么不同？java自己实现的事务主要是提供给EJB使用的，尽管两者都能实现事务控制，但更建议议使用SpringDataJPA的事务处理，千万不要两者混合使用。
 
-TODO：列表接口返回长度，接口参数校验。不需要的字段别返回，引入异常处理。
+TODO：列表接口返回长度，接口参数校验。不需要的字段别返回，引入异常处理。表ID自增是以JPA纬度计算而不是以本表记录纬度自增。
 
 ```
 

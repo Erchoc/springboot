@@ -12,7 +12,7 @@
 	<artifactId>mmp</artifactId>
 	<version>0.0.1</version>
 	<name>mmp</name>
-	<description>Metedata Managerment Platform</description>
+	<description>Metadata Managerment Platform</description>
 
 	<properties>
 		<java.version>11</java.version>

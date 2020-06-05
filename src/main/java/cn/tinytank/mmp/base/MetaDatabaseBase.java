@@ -1,7 +1,7 @@
 package cn.tinytank.mmp.base;
 
-import cn.tinytank.mmp.data.MeteDatabaseData;
-import cn.tinytank.mmp.entity.MeteDatabase;
+import cn.tinytank.mmp.data.MetaDatabaseData;
+import cn.tinytank.mmp.entity.MetaDatabase;
 import cn.tinytank.mmp.utils.Response;
 import cn.tinytank.mmp.utils.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +16,20 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/meta/database")
-public class MeteDatabaseBase {
+public class MetaDatabaseBase {
 
     @Autowired
-    private MeteDatabaseData meteDatabaseData;
+    private MetaDatabaseData metaDatabaseData;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Response create (@ModelAttribute MeteDatabase meteDatabase) {
-        meteDatabaseData.save(meteDatabase);
+    public Response create (@ModelAttribute MetaDatabase metaDatabase) {
+        metaDatabaseData.save(metaDatabase);
         return ResponseUtil.success();
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public Response query () {
-        return ResponseUtil.success(meteDatabaseData.query());
+        return ResponseUtil.success(metaDatabaseData.query());
     }
 
 }

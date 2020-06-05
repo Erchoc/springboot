@@ -12,7 +12,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table
-public class MeteDatabase {
+public class MetaDatabase {
 
     @Id
     @GeneratedValue
@@ -22,11 +22,11 @@ public class MeteDatabase {
 
     private String location;
 
-    public MeteDatabase() {
+    public MetaDatabase() {
 
     }
 
-    public MeteDatabase(String name, String location) {
+    public MetaDatabase(String name, String location) {
         this.name = name;
         this.location = location;
     }
