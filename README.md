@@ -54,8 +54,25 @@ Maven 下载依赖太慢，自动配置阿里云代理。删除 mvnw、mvnw.cmd�
 团队项目中 IDEA 自动安装依赖容易导致冲突，但本地删除 iml 文件会导致 IDEA 无法识别 Maven 项目，请确保 .gitignore 忽略提交iml文件。
 关闭前缀统一的包名子目录，右键左上角的 Project，将 Compact Middle Packages 并去掉 Flatten Packages 勾选即可。
 为了让所有人使用统一的maven，使用 .mvn 和 mvnw 命令并确保该文件被提交到 git remote repository(mvn -N io.takari:maven:wrapper -Dmaven=3.6.3)
-mvn install -e 报错无效的目标发行版，原因是我本机默认 Shell 使用JDK8，项目配置JDK11，执行别名 jdk11 切换 JAVA_PATH 后重新运行即可。
-./mvnw 无法使用，一直卡死。// TODO 
+
+// TODO LIST
+./mvnw 一直卡死无法使用。
+maven 构建时报错 `NoPosition: javac: 无效的目标发行版: 11`。
+POM文件 properties 为什么要添加编码? <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+Scala和Java混编该如何配置POM文件? 使用 scala-maven-plugin 让 maven 支持 scala 项目，使用 scala-library 支持scala语法和库，使用 maven-assembly-plugin 对混合工程进行打包。
+打包失败，build 为什么要添加scala插件? 遇到3.2.1不行更新到4.4.0报错javac无效发行版但程序可以正常运行(将默认JDK版本改成JDK11)。
+
+java源码和测试同级目录添加scala目录，并打开 Project Structure 设置该目录为 Sources 和 Tests。Scala和Java混编时，同一包名下类名不能相同，但方法名可以重复。
+原接口调用 /svc/app/func 若要改成 /api/svc/app/func，只需配置 `context-path: /api` 即可。(SpringBoot2.x后该配置项位于server.servlet，原server下设置将失效)
+mysql-connector > 6.0 时，需使用连接器 com.mysql.cj.jdbc.Driver。
+对Data即Service层写单元测试，使用默认的springboot-starter-test @RunWith 注解无效，需手动加入junit依赖，不写版本使用了最新的4.13
+
+@Autowired 和 @Transactional 注解作用，事务注解必须显示rollback问题
+无法点击左侧开始运行方法级单元测试，
+接口请求路径必须携带最后的/，如何解决？
+Postman测试接口只能用form-data不能用row-json填写字段。
+列表接口返回长度，接口参数校验。不需要的字段别返回。
+
 ```
 
 

@@ -9,9 +9,7 @@ public class Hello {
 
     @RequestMapping(value = "/", method = RequestMethod.GET )
     public String sayHello() {
-        /**
-         * base => controller
-         */
-        return "Hello World";
+
+        return "Hello World, I'm 杨雪晋";
     }
 }

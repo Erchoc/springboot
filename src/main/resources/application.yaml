@@ -1,2 +1,24 @@
+spring:
+  profiles:
+    active: dev # dev || uat || prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: AIni310932019
+    url: jdbc:mysql://127.0.0.1:3306/springboot
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+---
 server:
   port: 9000
+  servlet:
+    context-path: /v1
+---
+logging:
+  file:
+    path: ./logs
+---
+svc:
+  version: 0.0.1
