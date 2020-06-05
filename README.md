@@ -71,7 +71,12 @@ mysql-connector > 6.0 时，需使用连接器 com.mysql.cj.jdbc.Driver。
 无法点击左侧开始运行方法级单元测试，
 接口请求路径必须携带最后的/，如何解决？
 Postman测试接口只能用form-data不能用row-json填写字段。
-列表接口返回长度，接口参数校验。不需要的字段别返回。
+IDEA默认配置可能响应不太灵敏，其自动识别和推导时不时存在问题。
+
+Scala实体定义为什么加 @BeanProperty？统一访问原则，用来自动处理getter和setter方法。
+javax和spring分别的 @Transactional 事务注解有什么不同？java自己实现的事务主要是提供给EJB使用的，尽管两者都能实现事务控制，但更建议议使用SpringDataJPA的事务处理，千万不要两者混合使用。
+
+TODO：列表接口返回长度，接口参数校验。不需要的字段别返回，引入异常处理。
 
 ```
 
